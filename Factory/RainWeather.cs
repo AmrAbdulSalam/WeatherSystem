@@ -15,7 +15,7 @@ namespace WeatherSystem.Factory
 
         public void DisplayMessage(WeatherDTO weather)
         {
-            bool valueExceed = weather.Temperature > HumidityThreshold;
+            bool valueExceed = weather.Humidity > HumidityThreshold;
             if (Enabled && valueExceed)
             {
                 Console.WriteLine("RainBot is activated!");

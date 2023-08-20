@@ -9,8 +9,12 @@ namespace WeatherSystem
 
         public static async Task ReadConfigurationFileAsync(string path)
         {
-            var jsonContent = await File.ReadAllTextAsync(path);
-            Configuration = JsonSerializer.Deserialize<WeatherConfiguration>(jsonContent);
+            using (var reader = new StreamReader(File.OpenRead(path)))
+            {
+                var jsonContent = await File.ReadAllTextAsync(path);
+                Configuration = JsonSerializer.Deserialize<WeatherConfiguration>(jsonContent);
+            }
+               
         }
     }
 }

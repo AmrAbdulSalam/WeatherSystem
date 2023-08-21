@@ -3,7 +3,7 @@ using WeatherSystem.Models;
 
 namespace WeatherSystem.Strategies
 {
-    public class JsonStrategy : IStrategy
+    public class JsonReader : IReader
     {
         public WeatherDTO ReadData(string input)
         {

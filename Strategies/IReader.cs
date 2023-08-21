@@ -2,7 +2,7 @@
 
 namespace WeatherSystem.Strategies
 {
-    public interface IStrategy
+    public interface IReader
     {
         public WeatherDTO ReadData(string input);
     }

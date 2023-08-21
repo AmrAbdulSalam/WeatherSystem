@@ -10,22 +10,23 @@ namespace WeatherSystem.Factory
         {
         }
 
-        public override IBotFactory GetBot(string botType)
+        public override IBotFactory GetBot(BotType botType)
         {
             return botType switch
             {
-                "rain" => new RainWeather(){
-                    Enabled = _config.RainBot.Enabled ,
+                BotType.RainBot => new RainWeatherBot()
+                {
+                    Enabled = _config.RainBot.Enabled,
                     HumidityThreshold = _config.RainBot.HumidityThreshold,
                     Message = _config.RainBot.Message
                 },
-                "sun" => new SunnyWeather()
+                BotType.SunBot => new SunnyWeatherBot()
                 {
                     Enabled = _config.SunBot.Enabled,
                     TempretureThreshold = _config.SunBot.TemperatureThreshold,
                     Message = _config.SunBot.Message
                 },
-                "snow" => new SnowWeather()
+                BotType.SnowBot => new SnowWeatherBot()
                 {
                     Enabled = _config.SnowBot.Enabled,
                     TempretureThreshold = _config.SnowBot.TemperatureThreshold,

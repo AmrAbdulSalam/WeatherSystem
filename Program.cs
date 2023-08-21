@@ -21,12 +21,12 @@ namespace Weather
 
                 if (DataValidation.IsJson(weatherData))
                 {
-                    var context = new Context(new JsonStrategy());
+                    var context = new Context(new JsonReader());
                     data = context.ExecuteStrtegy(weatherData);
                 }
                 else if (DataValidation.IsXml(weatherData))
                 {
-                    var context = new Context(new XmlStrategy());
+                    var context = new Context(new XmlReader());
                     data = context.ExecuteStrtegy(weatherData);
                 }
                 else
@@ -37,14 +37,14 @@ namespace Weather
                 var factory = new ConcreteBotFactory();
 
 
-                var rainBot = factory.GetBot("rain");
+                var rainBot = factory.GetBot(BotType.RainBot);
                 rainBot.DisplayMessage(data);
 
-                var snowBot = factory.GetBot("snow");
+                var snowBot = factory.GetBot(BotType.SnowBot);
                 snowBot.DisplayMessage(data);
 
 
-                var sunBot = factory.GetBot("sun");
+                var sunBot = factory.GetBot(BotType.SunBot);
                 sunBot.DisplayMessage(data);
 
             }

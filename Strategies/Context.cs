@@ -4,16 +4,16 @@ namespace WeatherSystem.Strategies
 {
     public class Context
     {
-        private IStrategy _strategy;
+        private IReader _reader;
 
-        public Context(IStrategy strategy)
+        public Context(IReader reader)
         {
-            _strategy = strategy;
+            _reader = reader;
         }
 
         public WeatherDTO ExecuteStrtegy(string input)
         {
-            return _strategy.ReadData(input);
+            return _reader.ReadData(input);
         }
     }
 }

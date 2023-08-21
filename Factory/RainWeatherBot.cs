@@ -2,13 +2,13 @@
 
 namespace WeatherSystem.Factory
 {
-    public class RainWeather : IBotFactory
+    public class RainWeatherBot : IBotFactory
     {
         public bool Enabled { get; set; }
         public double HumidityThreshold { get; set; }
         public string? Message { get; set; }
 
-        public RainWeather()
+        public RainWeatherBot()
         {
 
         }

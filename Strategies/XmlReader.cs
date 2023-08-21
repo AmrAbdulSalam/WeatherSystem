@@ -3,10 +3,11 @@ using WeatherSystem.Models;
 
 namespace WeatherSystem.Strategies
 {
-    public class XmlStrategy : IStrategy
+    public class XmlReader : IReader
     {
-        public XmlStrategy()
+        public XmlReader()
         {
+
         }
 
         public WeatherDTO ReadData(string input)

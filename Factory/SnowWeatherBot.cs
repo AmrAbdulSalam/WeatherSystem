@@ -2,24 +2,26 @@
 
 namespace WeatherSystem.Factory
 {
-    public class SunnyWeather : IBotFactory
+    public class SnowWeatherBot : IBotFactory
     {
         public bool Enabled { get; set; }
         public double TempretureThreshold { get; set; }
         public string? Message { get; set; }
 
-        public SunnyWeather()
+        public SnowWeatherBot()
         {
+
         }
 
         public void DisplayMessage(WeatherDTO weather)
         {
-            bool valueExceed = weather.Temperature > TempretureThreshold;
+            bool valueExceed = weather.Temperature < TempretureThreshold;
             if (Enabled && valueExceed)
             {
-                Console.WriteLine("SunBot is activated!");
+                Console.WriteLine("SnowBot is activated!");
                 Console.WriteLine(Message);
             }
+
         }
     }
 }

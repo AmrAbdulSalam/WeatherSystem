@@ -7,4 +7,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Validations\" />
+    <None Remove="Strategies\" />
+    <None Remove="Factory\" />
+    <None Remove="Configuration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Strategies\" />
+    <Folder Include="Factory\" />
+    <Folder Include="Configuration\" />
+  </ItemGroup>
 </Project>

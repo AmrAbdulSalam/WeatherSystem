@@ -13,15 +13,15 @@ namespace WeatherSystem.Factory
 
         }
 
-        public void DisplayMessage(WeatherDTO weather)
+        public bool DisplayMessage(WeatherDTO weather)
         {
             bool valueExceed = weather.Temperature < TempretureThreshold;
             if (Enabled && valueExceed)
             {
-                Console.WriteLine("SnowBot is activated!");
                 Console.WriteLine(Message);
+                return true;
             }
-
+            return false;
         }
     }
 }

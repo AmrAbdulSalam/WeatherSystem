@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherSystem", "WeatherSystem.csproj", "{56AD9E64-09F7-4AB8-BDEA-51E6CF97D6CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherSystem.Test", "..\WeatherSystem.Test\WeatherSystem.Test.csproj", "{EA9EFF81-1FD7-4190-B85E-0ED6208116CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{56AD9E64-09F7-4AB8-BDEA-51E6CF97D6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56AD9E64-09F7-4AB8-BDEA-51E6CF97D6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56AD9E64-09F7-4AB8-BDEA-51E6CF97D6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA9EFF81-1FD7-4190-B85E-0ED6208116CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA9EFF81-1FD7-4190-B85E-0ED6208116CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA9EFF81-1FD7-4190-B85E-0ED6208116CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA9EFF81-1FD7-4190-B85E-0ED6208116CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,6 +4,6 @@ namespace WeatherSystem.Factory
 {
     public interface IBotFactory
     {
-        public void DisplayMessage(WeatherDTO weather);
+        public bool DisplayMessage(WeatherDTO weather);
     }
 }
